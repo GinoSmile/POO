@@ -1,0 +1,34 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package evaluacionformativa;
+
+import java.time.LocalDate;
+import java.time.Month;
+
+/**
+ *
+ * @author CETECOM
+ */
+public class EvaluacionFormativa {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Docente profe1= new Docente("11111111-1", "12345", "Juan Soto", LocalDate.of(2024, Month.SEPTEMBER, 07), "Varas");
+        Docente profe2= new Docente("22222222-2", "67890", "Pedro Suazo", LocalDate.of(2022, Month.AUGUST, 22), "Varas");
+        Alumno nino1= new Alumno("Amalia Nunez", "33333333-3", 9, LocalDate.of(2014, Month.SEPTEMBER, 20));
+        Alumno nino2= new Alumno("Francisco Fuentes", "44444444-4", 9, LocalDate.of(2014, Month.NOVEMBER, 23));
+        Asignatura MatApli= new Asignatura("MAT0101", "Matematica Aplicada", nino1, profe1, 4.5f, 3.8f, 4.5f);
+        MatApli.generarNotaPresentacion();
+        System.out.println(MatApli.getNotaPresentacion());
+        Asignatura PBD= new Asignatura("PBD2208", "Programacion de BD", nino2, profe2, 5.2f, 4.7f, 5.1f);
+        PBD.generarNotaPresentacion();
+        System.out.println(PBD.getNotaPresentacion());
+    }
+    
+}
